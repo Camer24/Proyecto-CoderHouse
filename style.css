@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CSS HEX*/
+
+:root {
+    --verde-lima: #b2f300ff;
+    --turquesa: #00a5cfff;
+    --negro: #141414ff;
+    --verde-flour: #53ff45ff;
+    --blanco: #eef0f2ff;
+}
+
+.text-style{
+    text-decoration: none;
+    color: var(--verde-lima);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo{
+    font-size: 50px;
+    text-shadow: var(--verde-lima) 5px 0 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* fuera de vista mobile */
+.div__izq{
+    display: none;
+}
+
+.bbb{
+    display: none   ;
+}
+
+.desktop__img{
+    display: none;
+}
+
+.short__container{
+    display: none;
+}
+
+
+/* --- NAV BAR ---*/
+.nav__bar {
+    background-color: var(--negro);
+} 
+
+.nav__bar ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav__bar li{
+    list-style: none;
+    margin: 2px;
+}
+
+.nav__bar a{
+    font-size: 20px;
+}
+
+.nav__bar a:hover{
+    color: var(--verde-flour);
+    border-bottom: 1px solid var(--verde-flour);
+    transform: translateY(0.3rem);
+}
+
+/* --- FOOTER --- */
+.footer__container{
+    background-color: var(--negro);
+    height: 75px;
+    width: 100%;
+}
+
+.contacto__footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.contacto__footer a:hover{
+    color: var(--verde-flour);
+    border-bottom: 1px solid var(--verde-flour);
+}
+
+/* ------ HOME - MOBILE FIRST ------ */
+.div__padre__home {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+}
+nav {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+
+/* --- HOME ---*/
+.container__main{
+    width: 100%;
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+}
+.div__upper {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(./img/background-nubes-xxl.jpg);
+    background-size: cover;
+    border-bottom: 1px solid var(--verde-lima);
+    padding: 15px;  
+}
+
+.div__der{
+    background-image: url(./img/ferxxo-imgs/ferxxo-background.jpg);
+    display: flex;
+    height: 675px;  
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px
+}
+
+.div__der h2{
+    padding-bottom: 20px;
+}
+
+.album__container__main{
+    text-align: center;
+    box-shadow: 0px 0px 10px 4px var(--verde-lima);
+    background-color: var(--blanco);
+}
+
+/* --- BOTON ---*/
+
+.button__vamos{
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+}
+
+.aaa {
+    background-color: var(--blanco);
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+    color: var(--verde-lima);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    height: 100%;
+    text-decoration: none;
+   }
+   
+.aaa:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+   
+.aaa:hover:not(:disabled) {
+    background: var(--verde-lima);
+    color: white;
+    text-shadow: 0 0.1rem var(--verde-flour);
+}
+   
+.aaa:disabled {
+    cursor: auto;
+    color: grey;
+}
+
+/* ------ MUSIC MOBILE FIRST ------ */
+.main__music{
+    background-image: url(./img/ferxxo-imgs/ferxxo-background.jpg);
+    width: 100%;
+    height: 100%;
+}
+
+.music__container{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
+    justify-content: center;
+}
+
+.music__detail{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.feid__music{
+    text-align: center;
+    padding: 5px;
+}
+
+/* ------ TOUR ------ */
+.div__tour__container{
+    height: 100%;
+    width: 100%;
+    background-image: url(./img/background-nubes-xxl.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tour__detail{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/background-nubes-black.jpg);
+    background-size: contain;
+}
+
+.div__fechas__container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.data__show{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    border-bottom: 1px solid var(--verde-lima); 
+    margin: 5px;
+    padding: 5px;
+}
+
+.data__show li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    font-size: 25px; 
+}
+
+.boton__view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+    width: 7rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    font-size: 20px;
+    border: 1px solid var(--verde-lima);
+}
+
+.boton__view:hover{
+    background: var(--verde-lima);
+    color: white;
+    text-shadow: 0 0.1rem var(--verde-flour);
+}
+
+.boton__view a:hover{
+    color: white;
+    transform: translateY(0.1rem);
+    text-shadow: 0 0.1rem var(--verde-flour);
+}
+
+/* ------ TABLET 768px ------ */
+
+@media screen and (min-width: 768px) {
+    .div__padre__home {
+        grid-template-areas: 
+        'header header'
+        'main main'
+        'footer footer';
+    }
+
+    /* --- NAV BAR ---*/
+    .nav__bar{
+        height: 5vh;
+    }
+
+    .nav__bar ul{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .nav__bar li{
+        padding: 5px;
+    }
+
+    /* ------ HOME ------*/
+
+    .container__main{
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .div__upper{
+        display: none;
+    }
+
+    .div__izq{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        padding: 10px;
+        background-image: url(./img/background-sea.jpg);
+    }
+
+    .titulo{
+        font-size: 40px;
+    }
+
+    .ferxxo-img__container{
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+    .img__class{
+        height: 100%;
+        width: 100%;
+        border: 1px solid var(--verde-flour);
+        box-shadow: 0px 0px 1px 1px var(--verde-flour);
+        border-radius: 10px;
+    }
+
+    .img__container{
+        padding: 10px;
+    }
+
+    .img__container:hover{
+        transform: scale(1.05, 1.05);
+    }
+
+    .div__der{
+        height: 100%;
+        width: 50%;
+    }
+
+    .bbb{
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 75px;
+    }
+
+    .short__container{
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+    }   
+
+    .short__normal_h{
+        height: 500px;
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px 0px var(--verde-lima);
+    }
+
+    /* ------ MUSIC ------ */
+    .music__container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    /* ------ TOUR ------ */
+    .data__show{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .data__show li{
+        text-align: center;
+    }
+}
+
+/* ------ DESKTOP 1024px ------ */
+@media screen and (min-width: 1024px){
+
+    .titulo{
+        font-size: 50px;
+    }
+
+    /* ------ HOME ------*/
+    .desktop__img{
+        display: flex;
+    }
+
+    .ferxxo-img__container{
+        height: 100%;
+        width: 100%;
+        grid-template-rows: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .album__container__main{
+        min-width: 70%;
+        max-width: 660px;
+    }
+
+    .short__container{
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .short__normal_h{
+        height: 100%;
+        width: 100%;
+    }
+
+    /* ------ MUSIC ------ */
+
+    .main__music{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .music__container{
+        width: 90%;
+    }
+
+    .music__detail h3{
+        font-size: 30px;
+    }
+
+    .feid__music{
+        height: 500px;
+        padding-right: 25px;
+        font-size: 20px;
+    }
+
+    .feid__music iframe{
+        height: 90%;
+    }
+
+    /* ------ TOUR ------ */
+    .div__fechas__container{
+        width: 90%;
+    }
+}   
